@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>扭扭棒创意饰品网店</title>
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-text: #374151;
+      --color-text-muted: #6b7280;
+      --color-primary: #111827;
+      --color-primary-hover: #2563eb;
+      --color-card-bg: #f9fafb;
+      --radius: 0.75rem;
+      --shadow-light: 0 4px 6px rgba(0,0,0,0.05);
+      --shadow-hover: 0 8px 15px rgba(37, 99, 235, 0.15);
+      --font-sans: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0; padding: 0;
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: var(--color-primary-hover);
+      outline: none;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--color-bg);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+      box-shadow: var(--shadow-light);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-primary);
+      letter-spacing: 0.05em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .nav-links a {
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius);
+      transition: background-color 0.3s ease;
+    }
+    .nav-links a:hover {
+      background-color: var(--color-primary-hover);
+      color: white;
+    }
+    .hero {
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--color-primary);
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-primary {
+      background-color: var(--color-primary);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1.125rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: var(--color-primary-hover);
+      transform: scale(1.05);
+      outline: none;
+    }
+    section {
+      padding: 4rem 1rem;
+    }
+    section + section {
+      border-top: 1px solid #e5e7eb;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--color-card-bg);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-light);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      cursor: default;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--color-primary);
+      text-align: center;
+    }
+    .card p {
+      font-size: 1rem;
+      color: var(--color-text-muted);
+      text-align: center;
+      flex-grow: 1;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    @media (min-width: 640px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+      .hero p {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container" role="navigation" aria-label="Primary Navigation">
+      <div class="logo" tabindex="0">扭扭创意铺</div>
+      <div class="nav-links">
+        <a href="#products">产品展示</a>
+        <a href="#about">关于我们</a>
+        <a href="#contact">联系我们</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" role="banner">
+      <h1>创意扭扭棒饰品，点亮生活每一刻</h1>
+      <p>精选个性扭扭棒成品与精美吊饰，为您打造独一无二的装饰体验。</p>
+      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})" aria-label="浏览我们的产品">浏览产品</button>
+    </section>
+    <section id="products" aria-labelledby="products-title">
+      <h2 id="products-title" style="text-align: center; font-weight: 700; font-size: 2rem; margin-bottom: 2rem; color: #111827;">
+        热门产品
+      </h2>
+      <div class="products-grid">
+        <article class="card" role="group" aria-label="扭扭棒成品">
+          <img src="https://images.unsplash.com/photo-1602524816198-6368d292356b?auto=format&fit=crop&w=120&q=80" alt="创意扭扭棒成品展示" loading="lazy" />
+          <h3>创意扭扭棒成品</h3>
+          <p>采用环保材料制成，色彩丰富，趣味十足，适合作为个性装饰品。</p>
+        </article>
+        <article class="card" role="group" aria-label="精美吊饰">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=120&q=80" alt="精美吊饰展示" loading="lazy" />
+          <h3>精美吊饰</h3>
+          <p>多款多样的吊饰设计，小巧精致，适合搭配各种场合与风格。</p>
+        </article>
+        <article class="card" role="group" aria-label="定制服务">
+          <img src="https://images.unsplash.com/photo-1562184647-9e2fadac89e9?auto=format&fit=crop&w=120&q=80" alt="定制饰品服务" loading="lazy" />
+          <h3>定制服务</h3>
+          <p>提供个性化定制，让您的饰品独一无二，彰显专属风格。</p>
+        </article>
+      </div>
+    </section>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title" style="text-align: center; font-weight: 700; font-size: 2rem; margin-bottom: 1rem; color: #111827;">关于我们</h2>
+      <p style="max-width: 700px; margin: 0 auto; text-align: center; color: var(--color-text-muted); font-size: 1.125rem;">
+        我们专注于创意手工饰品的设计与销售，所有扭扭棒制品均采用安全环保的材料手工制作。我们的目标是为热爱个性化装饰的客户提供高质量且独特的产品体验。
+      </p>
+    </section>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" style="text-align: center; font-weight: 700; font-size: 2rem; margin-bottom: 1rem; color: #111827;">联系我们</h2>
+      <p style="text-align: center; color: var(--color-text-muted); font-size: 1rem; max-width: 700px; margin: 0 auto 2rem;">
+        有任何疑问或定制需求，请通过以下方式联系我们：
+      </p>
+      <p style="text-align: center; color: var(--color-primary); font-weight: 600; font-size: 1.125rem; user-select: text;">
+        邮箱: contact@niunioo.example<br />
+        电话: 123-4567-8901
+      </p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2024 扭扭创意铺 版权所有
+  </footer>
+</body>
+</html>
+
+
